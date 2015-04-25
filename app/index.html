@@ -2,7 +2,7 @@
 <html class="no-js">
   <head>
     <meta charset="utf-8">
-    <title></title>
+    <title>TrashApp</title>
     <meta name="description" content="">
     <meta name="viewport" content="width=device-width">
     <!-- Place favicon.ico and apple-touch-icon.png in the root directory -->
@@ -39,8 +39,8 @@
 
             <ul class="nav navbar-nav">
               <li class="active"><a href="#/">Home</a></li>
-              <li><a ng-href="#/about">About</a></li>
-              <li><a ng-href="#/">Contact</a></li>
+              <li><a ng-href="#/dinasour_desc/test">About</a></li>
+              <li><a ng-href="#/tag_view">TagList</a></li>
             </ul>
           </div>
         </div>
@@ -83,10 +83,17 @@
     <!-- endbower -->
     <!-- endbuild -->
 
-        <!-- build:js({.tmp,app}) scripts/scripts.js -->
-        <script src="scripts/app.js"></script>
-        <script src="scripts/controllers/main.js"></script>
-        <script src="scripts/controllers/about.js"></script>
-        <!-- endbuild -->
+    <!-- build:js({.tmp,app}) scripts/scripts.js --> <script src="scripts/app.js"></script>
+    <script src="scripts/services/tag_view_service_mock.js"></script>
+    <script src="scripts/services/tag_view_factoy.js"></script>
+    <script src="scripts/controllers/main.js"></script>
+    <script src="scripts/controllers/about.js"></script>
+    <script src="scripts/controllers/tag_view.js"></script>
+    <script src="scripts/controllers/dinasour_desc.js"></script>
+    <script src="scripts/services/find_content.js"></script>
+    <script src="scripts/services/tag_mock.js"></script>
+    <script src="scripts/services/find_service_mock.js"></script>
+    <script src="scripts/services/find_result_mock.js"></script>
+    <!-- endbuild -->
 </body>
 </html>
