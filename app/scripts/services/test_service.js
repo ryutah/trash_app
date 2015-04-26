@@ -2,15 +2,16 @@
 
 /**
  * @ngdoc service
- * @name trashAppApp.findContent
+ * @name trashAppApp.testService
  * @description
- * # findContent
+ * # testService
  * Service in the trashAppApp.
  */
 angular.module('trashAppApp')
-  .service('findContent', function () {
+  .service('testService', function () {
     // AngularJS will instantiate a singleton by calling "new" on this function
-    var service = {
-      findList: function(searchCondition, group) {}
+    //
+    return {
+      name: 'test'
     };
   });

@@ -1,23 +1,39 @@
 <div class="jumbotron">
-  <h1>'Allo, 'Allo!</h1>
-  <p class="lead">
-    <img src="images/yeoman.png" alt="I'm Yeoman"><br>
-    Always a pleasure scaffolding your apps.
-  </p>
-  <p><a class="btn btn-lg btn-success" ng-href="#/">Splendid!<span class="glyphicon glyphicon-ok"></span></a></p>
+  <h1>とらっしゅずかん</h1>
+  <h2>～世界の恐竜たち～</h2>
+  <a class="btn btn-default" href="">とらっしゅってなーに</a>
 </div>
 
-<div class="row marketing">
-  <h4>HTML5 Boilerplate</h4>
-  <p>
-    HTML5 Boilerplate is a professional front-end template for building fast, robust, and adaptable web apps or sites.
-  </p>
+<div class="container">
+  <div class="row">
+    <div class="input-group-btn">
+      <button type="button" class="btn btn-default dropdown-toggle col-sm-8" data-toggle="dropdown" aria-expanded="true">
+        {{ main.groupDropDown.groupName }} <span class="caret"></span>
+      </button>
+      <ul class="dropdown-menu" role="menu">
+        <li ng-repeat='group in main.groupList'>
+          <a ng-click="main.clickGroup(group.groupId)" class="btn btn-default" href="">{{ group.groupName }}</a>
+        </li>
+      </ul>
+    </div>
+  </div>
 
-  <h4>Angular</h4>
-  <p>
-    AngularJS is a toolset for building the framework most suited to your application development.
-  </p>
-
-  <h4>Karma</h4>
-  <p>Spectacular Test Runner for JavaScript.</p>
+  <div class="row">
+    <div class="input-group col-sm-12">
+      <!-- Single button -->
+      <div class="input-group-btn">
+        <button type="button" class="btn btn-default dropdown-toggle" data-toggle="dropdown" aria-expanded="true">
+          {{ main.searchType.name }} <span class="caret"></span>
+        </button>
+        <ul class="dropdown-menu" role="menu">
+          <li><a href="" ng-click="main.clickDropdown(1)">名前</a></li>
+          <li><a href="" ng-click="main.clickDropdown(2)">タグ</a></li>
+        </ul>
+      </div>
+      <input type="text" class="form-control" placeholder="Search for...">
+      <span class="input-group-btn">
+        <button class="btn btn-default" type="button">検索</button>
+      </span>
+    </div>
+  </div>
 </div>

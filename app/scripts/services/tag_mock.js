@@ -25,6 +25,11 @@ angular.module('trashAppApp')
     tagList.push(tag);
 
     var mock = {
+
+      findAll: function() {
+        return tagList;
+      },
+
       /**
        * @ngdoc
        * @name findById
@@ -50,6 +55,5 @@ angular.module('trashAppApp')
       }
     };
 
-    // Public API here
     return mock;
   });
