@@ -11,7 +11,7 @@ angular.module('trashAppApp')
   .service('getListMock', function (tagMock, groupMock) {
     function findGroupList(name) {
       var result = [];
-      if (name != undefined) {
+      if (name !== undefined) {
         result = groupMock.findByName(name);
       } else {
         result = groupMock.findAll();
@@ -21,7 +21,7 @@ angular.module('trashAppApp')
 
     function findTagList(name) {
       var result = [];
-      if (name != undefined) {
+      if (name !== undefined) {
         result = tagMock.findByName(name);
       } else {
         result = tagMock.findAll();
