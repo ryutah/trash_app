@@ -39,6 +39,11 @@ angular
         controller: 'DinasourDescCtrl',
         controllerAs: 'dinasour'
       })
+      .when('/add_contents', {
+        templateUrl: 'views/add_contents.html',
+        controller: 'AddContentsCtrl',
+        controllerAs: 'add'
+      })
       .otherwise({
         redirectTo: '/'
       });

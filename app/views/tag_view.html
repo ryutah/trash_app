@@ -1,11 +1,8 @@
 <p>This is the tag_view view.</p>
-<p>{{ sample }}</p>
-<div class="col-md-3">
-  <div ng-repeat="tag in tagList">
-    <div class="row">
-      <div class="col-md-12">
-        <p><a class="btn btn-default" href="" ng-click="">{{ tag.tagName }}</a></p>
-      </div>
-    </div>
-  </div>
+<div ng-init="sample.array = []"></div>
+<div ng-repeat="a in sample.array">
+  {{ a.name }}
 </div>
+<button ng-click="tagView.add()">ADD</button>
+<input type="TEXT" ng-model="sample.name">
+<p>{{ sample.name }}</p>

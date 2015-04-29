@@ -8,26 +8,14 @@
  * Controller of the trashAppApp
  */
 angular.module('trashAppApp')
-  .controller('TagViewCtrl', function (tagViewService) {
-    this.sample = 'TagViewCtrl';
-    this.pushTag = function(tagId) {
-      this.contentList = tagViewService.getContent(tagId);
+  .controller('TagViewCtrl', function ($scope) {
+    var Sample = function(id, name) {
+      this.id = id;
+      this.name = name;
     };
-    this.tagList = tagViewService.getTagList();
-    this.awesomeThings = [
-      'HTML5 Boilerplate',
-      'AngularJS',
-      'Karma'
-    ];
-
-    tagViewService.debug();
-
-    tagViewService.getTagList().forEach((function(val) {
-      console.log(val.tagName);
-    }));
-
-    var content = tagViewService.getContent(1);
-    content.forEach((function(val) {
-      console.log(JSON.stringify(val));
-    }));
+    var num = 0;
+    this.add = function() {
+      $scope.sample.array.push(new Sample(num, 'Array' + num));
+      num++;
+    };
   });

@@ -43,6 +43,5 @@ angular.module('trashAppApp')
       }
     };
 
-    // Public API here
     return mock;
   });

@@ -57,18 +57,17 @@
   </div>
 
   <div class="row">
-    <div class="input-group col-sm-12">
-      <!-- Single button -->
-      <div class="input-group-btn">
-        <button type="button" class="btn btn-default dropdown-toggle" data-toggle="dropdown" aria-expanded="true">
-          {{ main.searchType.name }} <span class="caret"></span>
-        </button>
-        <ul class="dropdown-menu" role="menu">
-          <li><a href="" ng-click="main.clickDropdown(1)">名前</a></li>
-          <li><a href="" ng-click="main.clickDropdown(2)">タグ</a></li>
-        </ul>
+    <div class="input-group">
+      <div class="col-md-2">
+        <select class="form-control">
+          <option>Mustard</option>
+          <option>Ketchup</option>
+          <option>Relish</option>
+        </select>
       </div>
-      <input type="text" class="form-control" placeholder="Search for...">
+      <div class="col-md-10">
+        <input type="text" class="col-md-10 form-control" placeholder="Search for...">
+      </div>
       <span class="input-group-btn">
         <button class="btn btn-default" type="button">検索</button>
       </span>

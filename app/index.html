@@ -20,7 +20,7 @@
     <![endif]-->
 
     <!-- Add your site or application content here -->
-    <div class="header">
+    <div ng-controller="TopPageCtrl as top" class="header">
       <div class="navbar navbar-inverse" role="navigation">
         <div class="container">
           <div class="navbar-header">
@@ -35,7 +35,7 @@
             <a class="navbar-brand" href="#/">trashApp</a>
           </div>
           <div class="collapse navbar-collapse" id="js-navbar-collapse">
-            
+
             <ul class="nav navbar-nav navbar-left">
               <li class="active"><a href="#/">Home</a></li>
               <li><a ng-href="#/dinasour_desc/test">About</a></li>
@@ -44,9 +44,19 @@
 
                 <form class="navbar-form navbar-right" role="search">
                   <div class="form-group">
-                    <input type="text" class="form-control" placeholder="Search">
+                    <div class="input-group">
+                      <div class="input-group-btn">
+                        <button type="button" class="btn btn-default dropdown-toggle" data-toggle="dropdown" aria-expanded="true">
+                          <span class="caret"></span>
+                        </button>
+                        <ul class="dropdown-menu" role="menu">
+                          <li ng-repeat="list in top.targetList"><a href="" ng-click="top.checkDropList(list.searchId)">{{ list.searchName }}</a></li>
+                        </ul>
+                      </div>
+                      <input type="text" ng-model="word" class="form-control" placeholder="Search for...">
+                    </div>
                   </div>
-                  <button type="submit" class="btn btn-default">Submit</button>
+                  <button type="submit" ng-click="top.search(word)" class="btn btn-default">検索</button>
                 </form>
               </li>
             </ul>
@@ -56,7 +66,7 @@
     </div>
 
     <div ng-view=""></div>
-    
+
     <div class="footer">
       <div class="container">
         <p><span class="glyphicon glyphicon-heart"></span>Trash</p>
@@ -90,6 +100,7 @@
     <!-- endbuild -->
 
     <!-- build:js({.tmp,app}) scripts/scripts.js --> <script src="scripts/app.js"></script>
+    <script src="scripts/trash_conf.js"></script>
     <script src="scripts/services/tag_mock.js"></script>
     <script src="scripts/services/base_mock.js"></script>
     <script src="scripts/services/description_mock.js"></script>
@@ -100,6 +111,11 @@
     <script src="scripts/controllers/tag_view.js"></script>
     <script src="scripts/controllers/dinasour_desc.js"></script>
     <script src="scripts/services/test_service.js"></script>
+    <script src="scripts/controllers/top_page.js"></script>
+    <script src="scripts/services/search_target.js"></script>
+    <script src="scripts/services/search.js"></script>
+    <script src="scripts/controllers/add_contents.js"></script>
+    <script src="scripts/services/registor.js"></script>
     <!-- endbuild -->
 </body>
 </html>
