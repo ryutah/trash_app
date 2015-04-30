@@ -11,6 +11,22 @@ angular.module('trashAppApp')
   .service('search', function (tagMock, groupMock) {
 
     function search(params) {
+      var searchObj = {};
+
+      switch(param.target) {
+        case TrashConf.SearchTarget.NAME:
+          obj.baseName = params.name;
+          break;
+        case TrashConf.SearchTarget.TAG:
+          obj.tagName = params.name;
+          break;
+        case TrashConf.SearchTarget.OTHERNAME:
+          obj.otherName = params.name;
+          break;
+        default:
+          console.error('検索対象じゃないよ');
+          return null;
+      }
     }
 
     function tagList(params) {
@@ -44,4 +60,4 @@ angular.module('trashAppApp')
 
       return groupList;
     }
-  });
+  });k

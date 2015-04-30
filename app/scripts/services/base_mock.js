@@ -24,6 +24,10 @@ angular.module('trashAppApp')
     baseList.push(base);
 
     var mock = {
+      findAll: function() {
+        return baseList;
+      },
+
       findById: function(baseId) {
         baseList.forEach(function(b) {
           if (baseId === b.baseId) {
