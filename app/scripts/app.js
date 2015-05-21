@@ -22,34 +22,6 @@ angular
     $urlRouterProvider
       .when('/#/about', '/about')
       .otherwise('/');
-//       .when('/', {
-//         templateUrl: 'views/main.html',
-//         controller: 'MainCtrl',
-//         controllerAs: 'main'
-//       })
-//       .when('/about', {
-//         templateUrl: 'views/about.html',
-//         controller: 'AboutCtrl',
-//       })
-//       .when('/tag_view', {
-//         templateUrl: 'views/tag_view.html',
-//         controller: 'TagViewCtrl',
-//         controllerAs: 'tagView'
-//       })
-//       .when('/dinasour_desc/:descId', {
-//         templateUrl: 'views/dinasour_desc.html',
-//         controller: 'DinasourDescCtrl',
-//         controllerAs: 'dinasour'
-//       })
-//       .when('/add_contents', {
-//         templateUrl: 'views/add_contents.html',
-//         controller: 'AddContentsCtrl',
-//         controllerAs: 'add'
-//       })
-//       .otherwise({
-//         redirectTo: '/'
-//       });
-
     $stateProvider
       .state('main', {
         url: '/',
